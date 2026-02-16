@@ -1,0 +1,40 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="avalonia_test.MainWindow"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="0"
+        Title="avalonia_test">
+    <Window.Styles>
+        <Style Selector="Button.WinBtn">
+            <Setter Property="CornerRadius" Value="0.0, 0.0, 9.0, 9.0" />
+            <Setter Property="Width"  Value="45" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Margin" Value="3, 0, 3, 0" />
+        </Style>
+    </Window.Styles>
+    
+    <Grid RowDefinitions="40, *">
+        <Border Background="#000000" Grid.Row="0" x:Name="TitleBar">
+            <Grid ColumnDefinitions="*, Auto, Auto, Auto">
+                <TextBlock Grid.Column="0">HELLO WORLD.</TextBlock>
+                <Button Classes="WinBtn" x:Name="MinimizeBtn" Grid.Column="1">
+                    <Image Source="Assets/minimize.png"></Image>
+                </Button>
+                <Button Classes="WinBtn" x:Name="MaximizeBtn" Grid.Column="2">
+                    <Image Source="Assets/maximize.png"></Image>
+                </Button>
+                <Button Classes="WinBtn" x:Name="CloseWinBtn" Grid.Column="3">
+                    <Image Source="Assets/close.png"></Image>
+                </Button>
+            </Grid>
+        </Border>
+        <Border Background="#00AAFF" Grid.Row="1">
+        </Border>
+    </Grid>
+</Window>
+
