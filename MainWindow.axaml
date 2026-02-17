@@ -6,7 +6,8 @@
         x:Class="avalonia_test.MainWindow"
         ExtendClientAreaToDecorationsHint="True"
         ExtendClientAreaChromeHints="NoChrome"
-        ExtendClientAreaTitleBarHeightHint="0"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        SystemDecorations="BorderOnly"
         Title="avalonia_test">
     <Window.Styles>
         <Style Selector="Button.WinBtn">
@@ -37,4 +38,3 @@
         </Border>
     </Grid>
 </Window>
-
