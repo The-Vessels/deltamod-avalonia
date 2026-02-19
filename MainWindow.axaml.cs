@@ -26,6 +26,10 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+
+        Width = Screens.All[0].Bounds.Width * 0.4;
+        Height = Screens.All[0].Bounds.Height * 0.7;
+
         TitleBar.PointerPressed += (sender, args) =>
         {
             if (args.GetCurrentPoint(this).Properties.IsLeftButtonPressed)
