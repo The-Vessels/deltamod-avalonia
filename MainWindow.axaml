@@ -10,6 +10,19 @@
         SystemDecorations="BorderOnly"
         Title="avalonia_test">
     <Window.Styles>
+        <Style Selector="Button">
+            <Setter Property="Background" Value="#00000000" />
+            <Setter Property="BorderThickness" Value="0" />
+        </Style>
+        <Style Selector="Button.SidebarButton">
+            <Setter Property="Padding" Value="7" />
+        </Style>
+        <Style Selector="Button.SidebarButton > Image">
+            <Setter Property="Width"  Value="26" />
+        </Style>
+        <Style Selector="Button.SidebarRibbon">
+            <Setter Property="Margin" Value="7, 0, 0, 0" />
+        </Style>
         <Style Selector="Button.WinBtn">
             <Setter Property="BorderThickness" Value="0" />
             <Setter Property="CornerRadius" Value="0.0, 0.0, 9.0, 9.0" />
@@ -41,6 +54,21 @@
             <Setter Property="Height" Value="35" />
             <!-- <Setter Property="Margin" Value="0.5, 0, 0.5, 0" /> -->
         </Style>
+        <Style Selector="Border.Sidebar">
+            <Setter Property="CornerRadius" Value="50" />
+            <Setter Property="Opacity" Value="0.6" />
+            <Setter Property="Width" Value="64" />
+            <Setter Property="Transitions">
+                <Transitions>
+                    <DoubleTransition Property="Opacity" Duration="0:0:0.25" />
+                    <DoubleTransition Property="Width"   Duration="0:0:0.25" />
+                </Transitions>
+            </Setter>
+        </Style>
+        <Style Selector="Border.Sidebar:pointerover">
+            <Setter Property="Opacity" Value="1" />
+            <Setter Property="Width" Value="62" />
+        </Style>
     </Window.Styles>
 
     <Grid>
@@ -68,7 +96,7 @@
         <Border x:Name="OrangeBorder" ZIndex="1" BorderBrush="#C54828" BorderThickness="3">
         </Border>
 
-        <Grid RowDefinitions="40, *">
+        <Grid RowDefinitions="42, *">
 
             <Border BorderBrush="#C54828" Background="#00000000" BorderThickness="2" Grid.Row="0" x:Name="TitleBar">
                 <Grid ColumnDefinitions="18, 15, 5, 60, *, 51, 51, 51, 7.5">
@@ -87,6 +115,42 @@
                 </Grid>
             </Border>
             <Border Grid.Row="1">
+            </Border>
+        </Grid>
+        <Grid x:Name="SidebarContainer" RowDefinitions="*, auto, *" ColumnDefinitions="15, auto, *">
+            <Border Grid.Row="1" Grid.Column="1" x:Name="Sidebar" Classes="Sidebar" Background="rgba(0, 0, 0, 0.3)" BorderBrush="#C54828" BorderThickness="2" Padding="0, 15, 0, 15">
+                <Grid x:Name="SidebarButtons" Margin="5, 0, 5, 0" RowDefinitions="*, 10, *, 10, *, 10, *, 10, *, 10, *">
+                    <Grid Classes="SidebarRibbon" Grid.Row="0">
+                        <Button Classes="SidebarButton">
+                            <Image Source="Assets/main.png"></Image>
+                        </Button>
+                    </Grid>
+                    <Grid Classes="SidebarRibbon" Grid.Row="2">
+                        <Button Classes="SidebarButton">
+                            <Image Source="Assets/allmods.png"></Image>
+                        </Button>
+                    </Grid>
+                    <Grid Classes="SidebarRibbon" Grid.Row="4">
+                        <Button Classes="SidebarButton">
+                            <Image Source="Assets/options.png"></Image>
+                        </Button>
+                    </Grid>
+                    <Grid Classes="SidebarRibbon" Grid.Row="6">
+                        <Button Classes="SidebarButton">
+                            <Image Source="Assets/installmanager.png"></Image>
+                        </Button>
+                    </Grid>
+                    <Grid Classes="SidebarRibbon" Grid.Row="8">
+                        <Button Classes="SidebarButton">
+                            <Image Source="Assets/shop.png"></Image>
+                        </Button>
+                    </Grid>
+                    <Grid Classes="SidebarRibbon" Grid.Row="10">
+                        <Button Classes="SidebarButton">
+                            <Image Source="Assets/credits.png"></Image>
+                        </Button>
+                    </Grid>
+                </Grid>
             </Border>
         </Grid>
     </Grid>
