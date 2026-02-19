@@ -37,5 +37,10 @@ public partial class MainWindow : Window
         MaximizeBtn.Click += (_, _) =>
             WindowState = (WindowState == WindowState.FullScreen) ? WindowState.Normal : WindowState.FullScreen;
         CloseWinBtn.Click += (_, _) => Close();
+
+        Resized += (_, _) =>
+        {
+            Console.WriteLine(TitleBar.Bounds);
+        };
     }
 }
