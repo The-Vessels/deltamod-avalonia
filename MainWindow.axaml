@@ -58,16 +58,20 @@
             <Setter Property="CornerRadius" Value="50" />
             <Setter Property="Opacity" Value="0.6" />
             <Setter Property="Width" Value="64" />
+            <Setter Property="RenderTransform" Value="translateX(0px)" />
+            <Setter Property="Background" Value="rgba(0, 0, 0, 0.3)" />
             <Setter Property="Transitions">
                 <Transitions>
-                    <DoubleTransition Property="Opacity" Duration="0:0:0.25" />
-                    <DoubleTransition Property="Width"   Duration="0:0:0.25" />
+                    <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.9" Easing="0.16, 1.0, 0.3, 1.0"/>
+                    <DoubleTransition Property="Opacity" Duration="0:0:0.9" Easing="0.16, 1.0, 0.3, 1.0"/>
+                    <BrushTransition Property="Background" Duration="0:0:0.9" Easing="0.16, 1.0, 0.3, 1.0"/>
                 </Transitions>
             </Setter>
         </Style>
         <Style Selector="Border.Sidebar:pointerover">
             <Setter Property="Opacity" Value="1" />
-            <Setter Property="Width" Value="62" />
+            <Setter Property="RenderTransform" Value="translateX(15px)" />
+            <Setter Property="Background" Value="rgba(0, 0, 0, 0.5)" />
         </Style>
     </Window.Styles>
 
@@ -118,7 +122,7 @@
             </Border>
         </Grid>
         <Grid x:Name="SidebarContainer" RowDefinitions="*, auto, *" ColumnDefinitions="15, auto, *">
-            <Border Grid.Row="1" Grid.Column="1" x:Name="Sidebar" Classes="Sidebar" Background="rgba(0, 0, 0, 0.3)" BorderBrush="#C54828" BorderThickness="2" Padding="0, 15, 0, 15">
+            <Border Grid.Row="1" Grid.Column="1" x:Name="Sidebar" Classes="Sidebar" BorderBrush="#C54828" BorderThickness="2" Padding="0, 15, 0, 15">
                 <Grid x:Name="SidebarButtons" Margin="5, 0, 5, 0" RowDefinitions="*, 10, *, 10, *, 10, *, 10, *, 10, *">
                     <Grid Classes="SidebarRibbon" Grid.Row="0">
                         <Button Classes="SidebarButton">
