@@ -65,6 +65,7 @@
                     <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.9" Easing="0.16, 1.0, 0.3, 1.0"/>
                     <DoubleTransition Property="Opacity" Duration="0:0:0.9" Easing="0.16, 1.0, 0.3, 1.0"/>
                     <BrushTransition Property="Background" Duration="0:0:0.9" Easing="0.16, 1.0, 0.3, 1.0"/>
+                    <BoxShadowsTransition Property="BoxShadow" Duration="0:0:0.9" Easing="0.16, 1.0, 0.3, 1.0"/>
                 </Transitions>
             </Setter>
         </Style>
@@ -72,6 +73,7 @@
             <Setter Property="Opacity" Value="1" />
             <Setter Property="RenderTransform" Value="translateX(15px)" />
             <Setter Property="Background" Value="rgba(0, 0, 0, 0.5)" />
+            <Setter Property="BoxShadow" Value="0 0 15 #C54828" />
         </Style>
     </Window.Styles>
 
