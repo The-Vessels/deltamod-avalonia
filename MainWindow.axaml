@@ -13,6 +13,10 @@
         <Style Selector="Button">
             <Setter Property="Background" Value="#00000000" />
             <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="RenderTransform" Value="scale(1.0)" />
+        </Style>
+        <Style Selector="Button:pointerover">
+            <Setter Property="RenderTransform" Value="scale(1.1)" />
         </Style>
         <Style Selector="Button.WinBtn">
             <Setter Property="BorderThickness" Value="0" />
@@ -67,26 +71,30 @@
             <Setter Property="Background" Value="rgba(0, 0, 0, 0.5)" />
             <Setter Property="BoxShadow" Value="0 0 15 #C54828" />
         </Style>
+        <!-- SIDEBAR BUTTON STUFF IS HEEEEEEEEEEEERRRRRREEEEEEEEEEEEEEEE-->
         <Style Selector="Button.SidebarButton">
             <Setter Property="Width" Value="40" />
             <Setter Property="Height" Value="40" />
             <Setter Property="Padding" Value="7" />
-            <Setter Property="RenderTransform" Value="scale(1.0)" />
-            <Setter Property="CornerRadius" Value="5" />
+            
+            <Setter Property="CornerRadius" Value="25.0" />
             <Setter Property="Transitions">
                 <Transitions>
-                    <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.2" />
+                    <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.2" Easing="0.25, 1, 0.5, 1"/>
+                    <BrushTransition Property="Background" Duration="0:0:0.2" Easing="0.25, 1, 0.5, 1"/>
+                    <CornerRadiusTransition Property="CornerRadius" Duration="0:0:0.2" Easing="0.25, 1, 0.5, 1"/>
                 </Transitions>
             </Setter>
         </Style>
         <Style Selector="Button.SidebarButton:pointerover">
-            <Setter Property="RenderTransform" Value="scale(1.15)" />
             <Setter Property="Background" Value="rgb(72, 72, 72)" />
+            <Setter Property="CornerRadius" Value="5.0" />
         </Style>
         <Style Selector="Button.SidebarButton > Image">
             <Setter Property="Width"  Value="26" />
         </Style>
         <Style Selector="Button.SidebarRibbon">
+            
         </Style>
     </Window.Styles>
 
