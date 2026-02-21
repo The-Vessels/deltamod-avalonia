@@ -18,36 +18,44 @@
         <Style Selector="Button:pointerover">
             <Setter Property="RenderTransform" Value="scale(1.1)" />
         </Style>
+        <Style Selector="Button:focus">
+            <Setter Property="RenderTransform" Value="scale(1.2)" />
+        </Style>
         <Style Selector="Button.WinBtn">
             <Setter Property="BorderThickness" Value="0" />
             <Setter Property="CornerRadius" Value="0.0, 0.0, 9.0, 9.0" />
             <Setter Property="Width"  Value="45" />
             <Setter Property="Height" Value="30" />
-            <Setter Property="VerticalAlignment"   Value="Top" />
+            <!-- <Setter Property="VerticalAlignment"   Value="Bottom" /> -->
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="Background" Value="#C54828" />
-            <!-- <Setter Property="Margin" Value="3, 0, 3, 0" /> -->
+            <Setter Property="RenderTransform" Value="translateY(-7px)" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="Margin" Value="3, 0, 3, 0" />
 
             <Setter Property="Transitions">
                 <Transitions>
-                    <DoubleTransition Property="Width"  Duration="0:0:0.1" />
-                    <DoubleTransition Property="Height" Duration="0:0:0.1" />
+                    <DoubleTransition Property="Width"  Duration="0:0:0.3" Easing="0.16, 1.0, 0.3, 1.0"/>
+                    <DoubleTransition Property="Height" Duration="0:0:0.3" Easing="0.16, 1.0, 0.3, 1.0"/>
                     <!-- <DoubleTransition Property="Margin.Left" Duration="0:0:0.25" /> -->
-                    <BrushTransition Property="Background" Duration="0:0:0.1" />
+                    <BrushTransition Property="Background" Duration="0:0:0.3" Easing="0.16, 1.0, 0.3, 1.0"/>
+                    <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.3" Easing="0.16, 1.0, 0.3, 1.0"/>
                 </Transitions>
             </Setter>
 
         </Style>
         <Style Selector="Button.WinBtn > Image">
             <Setter Property="VerticalAlignment" Value="Bottom" />
-            <Setter Property="Width"  Value="12" />
-            <Setter Property="Height" Value="12" />
+            <Setter Property="Width"  Value="15" />
+            <!-- <Setter Property="Height" Value="12" /> -->
         </Style>
         <Style Selector="Button.WinBtn:pointerover">
             <Setter Property="Background" Value="#FFFFFF" />
-            <Setter Property="Width"  Value="50" />
-            <Setter Property="Height" Value="35" />
+            <Setter Property="RenderTransform" Value="translateY(-3px) scale(1.1)" />
             <!-- <Setter Property="Margin" Value="0.5, 0, 0.5, 0" /> -->
+        </Style>
+        <Style Selector="Button#CloseWinBtn:pointerover">
+            <Setter Property="Background" Value="#FF0000" />
         </Style>
         <Style Selector="Border.Sidebar">
             <Setter Property="CornerRadius" Value="50" />
@@ -127,7 +135,6 @@
                 <Grid ColumnDefinitions="18, 15, 5, 60, *, 51, 51, 51, 7.5">
                     <Image Source="Assets/icon.png" Grid.Column="1" />
                     <Image Source="Assets/logo.png" Grid.Column="3" />
-
                     <Button Classes="WinBtn" x:Name="MinimizeBtn" Grid.Column="5">
                         <Image Source="Assets/minimize.png"></Image>
                     </Button>
