@@ -27,8 +27,8 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        Width = Screens.All[0].Bounds.Width * 0.4;
-        Height = Screens.All[0].Bounds.Height * 0.7;
+        Width = Screens.All[0].Bounds.Width * 0.65;
+        Height = Screens.All[0].Bounds.Height * 0.75;
 
         TitleBar.PointerPressed += (sender, args) =>
         {

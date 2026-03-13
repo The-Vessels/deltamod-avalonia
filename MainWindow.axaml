@@ -16,8 +16,8 @@
             <Setter Property="Height" Value="30" />
             <!-- <Setter Property="VerticalAlignment"   Value="Bottom" /> -->
             <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="Background" Value="#000000" />
-            <Setter Property="RenderTransform" Value="translateY(-7px)" />
+            <Setter Property="Background" Value="#00000000" />
+            <Setter Property="RenderTransform" Value="translateY(-8px)" />
             <Setter Property="Padding" Value="5" />
 
             <Setter Property="Transitions">
@@ -39,7 +39,7 @@
         </Style>
         <Style Selector="Button.WinBtn:pointerover">
             <Setter Property="Background" Value="#815ac7" />
-            <Setter Property="RenderTransform" Value="translateY(-5px)" />
+            <Setter Property="RenderTransform" Value="translateY(-6px)" />
             <!-- <Setter Property="Margin" Value="0.5, 0, 0.5, 0" /> -->
         </Style>
         <Style Selector="Button#CloseWinBtn:pointerover">
@@ -47,6 +47,7 @@
         </Style>
         <!-- SIDEBAR BUTTON STUFF IS HEEEEEEEEEEEERRRRRREEEEEEEEEEEEEEEE-->
         <Style Selector="Border.Sidebar">
+            <Setter Property="Padding" Value="0, 10, 0, 10" />
             <Setter Property="Background" Value="rgb(0, 0, 0)" />
             <Setter Property="BoxShadow" Value="0 0 0 #b5e61d" />
             <Setter Property="Transitions">
@@ -59,11 +60,9 @@
             <Setter Property="BoxShadow" Value="0 0 15 #b5e61d" />
         </Style>
         <Style Selector="Button.SidebarButton">
-            <Setter Property="Padding" Value="20"/>
             <Setter Property="Background" Value="#00000000" />
             <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="RenderTransform" Value="scale(1.0)" />
-            <Setter Property="CornerRadius" Value="2.5" />
+            <Setter Property="CornerRadius" Value="2" />
             <Setter Property="Width"  Value="40" />
             <Setter Property="Height"  Value="40" />
             <Setter Property="Transitions">
@@ -73,65 +72,59 @@
             </Setter>
         </Style>
         <Style Selector="Button.SidebarButton:pointerover">
-            <Setter Property="Background" Value="#80b5e61d" />
-            <Setter Property="RenderTransform" Value="scale(1.1)" />
+            <Setter Property="Background" Value="#80815ac7" />
+            <!-- <Setter Property="RenderTransform" Value="scale(1.1)" /> -->
         </Style>
         <Style Selector="Button.SidebarButton > Image">
             <Setter Property="Width"  Value="40" />
             <Setter Property="Height"  Value="40" />
         </Style>
         <Style Selector="Button.SidebarButton:focus">
-            <Setter Property="RenderTransform" Value="scale(1.2)" />
+            <!-- <Setter Property="RenderTransform" Value="scale(1.2)" /> -->
+            <Setter Property="Background" Value="#60b5e61d" />
         </Style>
     </Window.Styles>
 
     <Grid>
-        <Border x:Name="WindowBorder" ZIndex="999" BorderBrush="#815ac7" BorderThickness="3">
-        </Border>
-
-        <Grid RowDefinitions="45, *" ColumnDefinitions="70, *">
-            <Border BorderBrush="#b5e61d" Background="#000000" BorderThickness="2" Grid.Row="0" Grid.ColumnSpan="2" x:Name="TitleBar">
-                <Grid ColumnDefinitions="18, 15, 5, 60, *, 45, 45, 45">
-                    <Image Source="Assets/mntl_icon.png" Grid.Column="1" Width="20" Height="20"/>
-                    <!-- <Image Source="Assets/mntl_logo.png" Grid.Column="3" /> -->
-                    <Button Classes="WinBtn" x:Name="MinimizeBtn" Grid.Column="5">
-                        <Image Source="Assets/mntl_minimize.png" RenderOptions.BitmapInterpolationMode="None"></Image>
-                    </Button>
-                    <Button Classes="WinBtn" x:Name="MaximizeBtn" Grid.Column="6">
-                        <Image Source="Assets/mntl_maximize.png" RenderOptions.BitmapInterpolationMode="None"></Image>
-                    </Button>
-                    <Button Classes="WinBtn" x:Name="CloseWinBtn" Grid.Column="7">
-                        <Image Source="Assets/mntl_close.png" RenderOptions.BitmapInterpolationMode="None"></Image>
-                    </Button>
-                </Grid>
-            </Border>
-            <Border Background="#000000" ZIndex="-1" Grid.Row="1" Grid.ColumnSpan="2">
-            </Border>
-            <Border Grid.Row="1" Grid.Column="0" x:Name="Sidebar" Classes="Sidebar" BorderBrush="#b5e61d" BorderThickness="0, 0, 2, 0" Padding="0, 10, 0, 10">
-                <Grid x:Name="SidebarButtons" RowDefinitions="auto, 10, auto, 10, auto, *, auto">
-                    <Grid Classes="SidebarRibbon" Grid.Row="0">
-                        <Button Classes="SidebarButton">
+        <Border x:Name="WindowBorder" ZIndex="999" BorderBrush="#815ac7" BorderThickness="2">
+            <Grid RowDefinitions="45, *" ColumnDefinitions="70, *">
+                <Border BorderBrush="#815ac7" Background="#000000" BorderThickness="0, 0, 0, 2" Grid.Row="0" Grid.ColumnSpan="2" x:Name="TitleBar">
+                    <Grid ColumnDefinitions="18, 15, 5, 60, *, 45, 45, 45">
+                        <Image Source="Assets/mntl_icon.png" RenderOptions.BitmapInterpolationMode="None" Grid.Column="1" Width="30" Height="30"/>
+                        <!-- <Image Source="Assets/mntl_logo.png" Grid.Column="3" /> -->
+                        <Button Classes="WinBtn" x:Name="MinimizeBtn" Grid.Column="5">
+                            <Image Source="Assets/mntl_minimize.png" RenderOptions.BitmapInterpolationMode="None"></Image>
+                        </Button>
+                        <Button Classes="WinBtn" x:Name="MaximizeBtn" Grid.Column="6">
+                            <Image Source="Assets/mntl_maximize.png" RenderOptions.BitmapInterpolationMode="None"></Image>
+                        </Button>
+                        <Button Classes="WinBtn" x:Name="CloseWinBtn" Grid.Column="7">
+                            <Image Source="Assets/mntl_close.png" RenderOptions.BitmapInterpolationMode="None"></Image>
+                        </Button>
+                    </Grid>
+                </Border>
+                <Border Background="#000000" ZIndex="-1" Grid.Row="1" Grid.ColumnSpan="2">
+                </Border>
+                <Border Grid.Row="1" Grid.Column="0" x:Name="Sidebar" Classes="Sidebar" BorderBrush="#b5e61d" BorderThickness="0, 0, 2, 0">
+                    <Grid x:Name="SidebarButtons" RowDefinitions="auto, 10, auto, 10, auto, 10, auto, *, auto">
+                        <Button Classes="SidebarButton" Grid.Row="0">
                             <Image Source="Assets/mntl_home.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                         </Button>
-                    </Grid>
-                    <Grid Classes="SidebarRibbon" Grid.Row="2">
-                        <Button Classes="SidebarButton">
+                        <Button Classes="SidebarButton" Grid.Row="2">
                             <Image Source="Assets/mntl_discover.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                         </Button>
-                    </Grid>
-                    <Grid Classes="SidebarRibbon" Grid.Row="4">
-                        <Button Classes="SidebarButton">
+                        <Button Classes="SidebarButton" Grid.Row="4">
                             <Image Source="Assets/mntl_librarby.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                         </Button>
-                    </Grid>
-                    <Grid Classes="SidebarRibbon" Grid.Row="6">
-                        <Button Classes="SidebarButton">
+                        <Border BorderBrush="#b5e61d" BorderThickness="1" Grid.Row="6">
+                        </Border>
+                        <Button Classes="SidebarButton" Grid.Row="8">
                             <Image Source="Assets/mntl_settings.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                         </Button>
                     </Grid>
-                </Grid>
-            </Border>
-        </Grid>
+                </Border>
+            </Grid>
+        </Border>
     </Grid>
     
 </Window>
