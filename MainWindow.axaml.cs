@@ -46,14 +46,5 @@ public partial class MainWindow : Window
         {
             Console.WriteLine(TitleBar.Bounds);
         };
-
-        Sidebar.PointerEntered += (_, _) =>
-        {
-            SidebarBackdrop.Background = new SolidColorBrush(Color.Parse("rgba(0, 0, 0, 0.5)"));
-        };
-        Sidebar.PointerExited += (_, _) =>
-        {
-            SidebarBackdrop.Background = new SolidColorBrush(Color.Parse("rgba(0, 0, 0, 0)"));
-        };
     }
 }

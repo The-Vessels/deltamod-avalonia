@@ -10,28 +10,15 @@
         SystemDecorations="BorderOnly"
         Title="avalonia_test">
     <Window.Styles>
-        <Style Selector="Button">
-            <Setter Property="Background" Value="#00000000" />
-            <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="RenderTransform" Value="scale(1.0)" />
-        </Style>
-        <Style Selector="Button:pointerover">
-            <Setter Property="RenderTransform" Value="scale(1.1)" />
-        </Style>
-        <Style Selector="Button:focus">
-            <Setter Property="RenderTransform" Value="scale(1.2)" />
-        </Style>
         <Style Selector="Button.WinBtn">
             <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="CornerRadius" Value="0.0, 0.0, 9.0, 9.0" />
             <Setter Property="Width"  Value="45" />
             <Setter Property="Height" Value="30" />
             <!-- <Setter Property="VerticalAlignment"   Value="Bottom" /> -->
             <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="Background" Value="#C54828" />
+            <Setter Property="Background" Value="#000000" />
             <Setter Property="RenderTransform" Value="translateY(-7px)" />
             <Setter Property="Padding" Value="5" />
-            <Setter Property="Margin" Value="3, 0, 3, 0" />
 
             <Setter Property="Transitions">
                 <Transitions>
@@ -46,155 +33,105 @@
         </Style>
         <Style Selector="Button.WinBtn > Image">
             <Setter Property="VerticalAlignment" Value="Bottom" />
-            <Setter Property="Width"  Value="15" />
+            <Setter Property="Width"  Value="20" />
+            <Setter Property="Height"  Value="20" />
             <!-- <Setter Property="Height" Value="12" /> -->
         </Style>
         <Style Selector="Button.WinBtn:pointerover">
-            <Setter Property="Background" Value="#808080" />
-            <Setter Property="RenderTransform" Value="translateY(-3px) scale(1.1)" />
+            <Setter Property="Background" Value="#815ac7" />
+            <Setter Property="RenderTransform" Value="translateY(-5px)" />
             <!-- <Setter Property="Margin" Value="0.5, 0, 0.5, 0" /> -->
         </Style>
         <Style Selector="Button#CloseWinBtn:pointerover">
             <Setter Property="Background" Value="#FF0000" />
         </Style>
+        <!-- SIDEBAR BUTTON STUFF IS HEEEEEEEEEEEERRRRRREEEEEEEEEEEEEEEE-->
         <Style Selector="Border.Sidebar">
-            <Setter Property="CornerRadius" Value="50" />
-            <Setter Property="Opacity" Value="0.6" />
-            <Setter Property="Width" Value="64" />
-            <Setter Property="RenderTransform" Value="translateX(0px) scale(1.0,0.925)" />
-            <Setter Property="Background" Value="rgba(0, 0, 0, 0.3)" />
-            <Setter Property="BoxShadow" Value="0 0 0 #C54828" />
+            <Setter Property="Background" Value="rgb(0, 0, 0)" />
+            <Setter Property="BoxShadow" Value="0 0 0 #b5e61d" />
             <Setter Property="Transitions">
                 <Transitions>
-                    <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.9" Easing="0.16, 1.0, 0.3, 1.0"/>
-                    <DoubleTransition Property="Opacity" Duration="0:0:0.9" Easing="0.16, 1.0, 0.3, 1.0"/>
-                    <BrushTransition Property="Background" Duration="0:0:0.9" Easing="0.16, 1.0, 0.3, 1.0"/>
                     <BoxShadowsTransition Property="BoxShadow" Duration="0:0:0.9" Easing="0.16, 1.0, 0.3, 1.0"/>
                 </Transitions>
             </Setter>
         </Style>
         <Style Selector="Border.Sidebar:pointerover">
-            <Setter Property="Opacity" Value="1" />
-            <Setter Property="RenderTransform" Value="translateX(15px) scale(1,1)" />
-            <Setter Property="Background" Value="rgba(0, 0, 0, 0.5)" />
-            <Setter Property="BoxShadow" Value="0 0 15 #C54828" />
+            <Setter Property="BoxShadow" Value="0 0 15 #b5e61d" />
         </Style>
-        <!-- SIDEBAR BUTTON STUFF IS HEEEEEEEEEEEERRRRRREEEEEEEEEEEEEEEE-->
         <Style Selector="Button.SidebarButton">
-            <Setter Property="Width" Value="40" />
-            <Setter Property="Height" Value="40" />
-            <Setter Property="Padding" Value="7" />
-            
-            <Setter Property="CornerRadius" Value="25.0" />
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Background" Value="#00000000" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="RenderTransform" Value="scale(1.0)" />
+            <Setter Property="CornerRadius" Value="2.5" />
+            <Setter Property="Width"  Value="40" />
+            <Setter Property="Height"  Value="40" />
             <Setter Property="Transitions">
                 <Transitions>
-                    <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.2" Easing="0.25, 1, 0.5, 1"/>
                     <BrushTransition Property="Background" Duration="0:0:0.2" Easing="0.25, 1, 0.5, 1"/>
-                    <CornerRadiusTransition Property="CornerRadius" Duration="0:0:0.2" Easing="0.25, 1, 0.5, 1"/>
                 </Transitions>
             </Setter>
         </Style>
         <Style Selector="Button.SidebarButton:pointerover">
-            <Setter Property="Background" Value="rgb(72, 72, 72)" />
-            <Setter Property="CornerRadius" Value="5.0" />
+            <Setter Property="Background" Value="#80b5e61d" />
+            <Setter Property="RenderTransform" Value="scale(1.1)" />
         </Style>
         <Style Selector="Button.SidebarButton > Image">
-            <Setter Property="Width"  Value="26" />
+            <Setter Property="Width"  Value="40" />
+            <Setter Property="Height"  Value="40" />
         </Style>
-        <Style Selector="Button.SidebarRibbon">
-            
-        </Style>
-        <Style Selector="Border.SidebarBackdrop">
-            <Setter Property="Background" Value="rgba(0, 0, 0, 0)" />
-            <Setter Property="Transitions">
-                <Transitions>
-                    <BrushTransition Property="Background" Duration="0:0:0.25" Easing="0.25, 1, 0.5, 1"/>
-                </Transitions>
-            </Setter>
+        <Style Selector="Button.SidebarButton:focus">
+            <Setter Property="RenderTransform" Value="scale(1.2)" />
         </Style>
     </Window.Styles>
 
     <Grid>
-        <Border x:Name="BgBorder" ZIndex="-2" Background="#000000">
-            <Image
-                Source="Assets/home.png" Stretch="UniformToFill"
-                RenderOptions.BitmapInterpolationMode="None"
-                Opacity="0.25"
-            />
-        </Border>
-        <Border x:Name="BgBorderBar" ZIndex="-1" Background="#000000">
-            <Border.Clip>
-                <RectangleGeometry Rect="{Binding Bounds, ElementName=TitleBar}" />
-            </Border.Clip>
-            <Image
-                Source="Assets/home.png" Stretch="UniformToFill"
-                RenderOptions.BitmapInterpolationMode="None"
-                Opacity="0.25"
-                Effect="blur(40)"
-            >
-            </Image>
-        </Border>
-        <Border x:Name="OrangeBorder" ZIndex="1" BorderBrush="#C54828" BorderThickness="3">
+        <Border x:Name="WindowBorder" ZIndex="999" BorderBrush="#815ac7" BorderThickness="3">
         </Border>
 
-        <Grid RowDefinitions="42, *">
-
-            <Border BorderBrush="#C54828" Background="#00000000" BorderThickness="2" Grid.Row="0" x:Name="TitleBar">
-                <Grid ColumnDefinitions="18, 15, 5, 60, *, 51, 51, 51, 7.5">
-                    <Image Source="Assets/icon.png" Grid.Column="1" />
-                    <Image Source="Assets/logo.png" Grid.Column="3" />
+        <Grid RowDefinitions="45, *" ColumnDefinitions="70, *">
+            <Border BorderBrush="#b5e61d" Background="#000000" BorderThickness="2" Grid.Row="0" Grid.ColumnSpan="2" x:Name="TitleBar">
+                <Grid ColumnDefinitions="18, 15, 5, 60, *, 45, 45, 45">
+                    <Image Source="Assets/mntl_icon.png" Grid.Column="1" Width="20" Height="20"/>
+                    <!-- <Image Source="Assets/mntl_logo.png" Grid.Column="3" /> -->
                     <Button Classes="WinBtn" x:Name="MinimizeBtn" Grid.Column="5">
-                        <Image Source="Assets/minimize.png"></Image>
+                        <Image Source="Assets/mntl_minimize.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                     </Button>
                     <Button Classes="WinBtn" x:Name="MaximizeBtn" Grid.Column="6">
-                        <Image Source="Assets/maximize.png"></Image>
+                        <Image Source="Assets/mntl_maximize.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                     </Button>
                     <Button Classes="WinBtn" x:Name="CloseWinBtn" Grid.Column="7">
-                        <Image Source="Assets/close.png"></Image>
+                        <Image Source="Assets/mntl_close.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                     </Button>
                 </Grid>
             </Border>
-            <Border Grid.Row="1">
+            <Border Background="#000000" ZIndex="-1" Grid.Row="1" Grid.ColumnSpan="2">
             </Border>
-        </Grid>
-        <Grid x:Name="SidebarContainer" RowDefinitions="*, auto, *" ColumnDefinitions="15, auto, *">
-            <Border Grid.Row="1" Grid.Column="1" x:Name="Sidebar" Classes="Sidebar" BorderBrush="#C54828" BorderThickness="2" Padding="0, 15, 0, 15">
-                <Grid x:Name="SidebarButtons" Margin="5, 0, 5, 0" RowDefinitions="*, 10, *, 10, *, 10, *, 10, *, 10, *">
+            <Border Grid.Row="1" Grid.Column="0" x:Name="Sidebar" Classes="Sidebar" BorderBrush="#b5e61d" BorderThickness="0, 0, 2, 0" Padding="0, 10, 0, 10">
+                <Grid x:Name="SidebarButtons" RowDefinitions="auto, 10, auto, 10, auto, *, auto">
                     <Grid Classes="SidebarRibbon" Grid.Row="0">
                         <Button Classes="SidebarButton">
-                            <Image Source="Assets/main.png"></Image>
+                            <Image Source="Assets/mntl_home.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                         </Button>
                     </Grid>
                     <Grid Classes="SidebarRibbon" Grid.Row="2">
                         <Button Classes="SidebarButton">
-                            <Image Source="Assets/allmods.png"></Image>
+                            <Image Source="Assets/mntl_discover.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                         </Button>
                     </Grid>
                     <Grid Classes="SidebarRibbon" Grid.Row="4">
                         <Button Classes="SidebarButton">
-                            <Image Source="Assets/options.png"></Image>
+                            <Image Source="Assets/mntl_librarby.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                         </Button>
                     </Grid>
                     <Grid Classes="SidebarRibbon" Grid.Row="6">
                         <Button Classes="SidebarButton">
-                            <Image Source="Assets/installmanager.png"></Image>
-                        </Button>
-                    </Grid>
-                    <Grid Classes="SidebarRibbon" Grid.Row="8">
-                        <Button Classes="SidebarButton">
-                            <Image Source="Assets/shop.png"></Image>
-                        </Button>
-                    </Grid>
-                    <Grid Classes="SidebarRibbon" Grid.Row="10">
-                        <Button Classes="SidebarButton">
-                            <Image Source="Assets/credits.png"></Image>
+                            <Image Source="Assets/mntl_settings.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                         </Button>
                     </Grid>
                 </Grid>
             </Border>
         </Grid>
-        <Border x:Name="SidebarBackdrop" Classes="SidebarBackdrop" ZIndex="-1">
-        </Border>
     </Grid>
     
 </Window>
