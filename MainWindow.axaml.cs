@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using Avalonia.Controls;
 using Avalonia.Media;
 
-namespace avalonia_test;
+namespace mmm;
 
 public partial class MainWindow : Window
 {

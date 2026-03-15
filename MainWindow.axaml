@@ -3,12 +3,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        x:Class="avalonia_test.MainWindow"
+        x:Class="mmm.MainWindow"
         ExtendClientAreaToDecorationsHint="True"
         ExtendClientAreaChromeHints="NoChrome"
         ExtendClientAreaTitleBarHeightHint="-1"
         SystemDecorations="BorderOnly"
-        Title="avalonia_test">
+        Title="MantleModManager">
     <Window.Styles>
         <Style Selector="Button.WinBtn">
             <Setter Property="BorderThickness" Value="0" />
@@ -122,6 +122,9 @@
                             <Image Source="Assets/mntl_settings.png" RenderOptions.BitmapInterpolationMode="None"></Image>
                         </Button>
                     </Grid>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="1" Background="#FF0000">
                 </Border>
             </Grid>
         </Border>
